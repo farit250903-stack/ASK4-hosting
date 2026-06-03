@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Form</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            border: 2px solid #888888;
+        }
+        th, td {
+            border: 1px solid #888888;
+            padding: 6px;
+            vertical-align: top;
+        }
+        th {
+            background-color: #d0d5ff;
+            font-size: 22px;
+            font-weight: normal;
+            width: 50%;
+        }
+        .header-row th {
+            text-align: center;
+        }
+        .label-cell {
+            font-size: 20px;
+            text-align: left;
+        }
+        .full-width-row td {
+            border-top: 2px solid #888888;
+        }
+        input[type="text"], select, textarea {
+            font-family: inherit;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 3px;
+        }
+        textarea {
+            width: 100%;
+            height: 120px;
+            margin-top: 5px;
+            resize: vertical;
+        }
+        .radio-group, .checkbox-group {
+            line-height: 1.4;
+        }
+        .button-container {
+            text-align: center;
+            padding: 8px;
+        }
+        button {
+            font-family: inherit;
+            font-size: 18px;
+            padding: 4px 15px;
+            background-color: #e1e1e1;
+            border: 1px solid #767676;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<form action="#" method="post">
+    <table>
+        <tr class="header-row">
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+        
+        <tr>
+            <td class="label-cell">Name</td>
+            <td>
+                <input type="text" name="user_name">
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="label-cell">Sex</td>
+            <td class="radio-group">
+                <label><input type="radio" name="sex" value="male"> Male</label><br>
+                <label><input type="radio" name="sex" value="female" checked> Female</label>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="label-cell">Eye color</td>
+            <td>
+                <select name="eye_color">
+                    <option value="green" selected>green</option>
+                    <option value="blue">blue</option>
+                    <option value="brown">brown</option>
+                    <option value="hazel">hazel</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <td class="label-cell">Check all that apply</td>
+            <td class="checkbox-group">
+                <label><input type="checkbox" name="height_check" value="over_6ft"> Over 6 feet tall</label><br>
+                <label><input type="checkbox" name="weight_check" value="over_200lbs"> Over 200 pounds</label>
+            </td>
+        </tr>
+        
+        <tr class="full-width-row">
+            <td colspan="2">
+                <label for="athletic_ability" class="label-cell" style="display: block; margin-bottom: 5px;">
+                    Describe your athletic ability:
+                </label>
+                <textarea id="athletic_ability" name="athletic_description"></textarea>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" class="button-container">
+                <button type="submit">Enter my information</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
